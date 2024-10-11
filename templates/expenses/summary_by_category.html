@@ -1,0 +1,79 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>Résumé des dépenses par catégorie</h2>
+<div class="form-row">
+    <div class="form-group col-md-5">
+        <canvas id="expensesChart" width="400" height="200"></canvas>
+    </div>
+    <div class="form-group col-md-1">
+    </div>
+    <div class="form-group col-md-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Catégorie</th>
+                    <th>Total Montant</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for expense in expenses_by_category %}
+                <tr>
+                    <td>{{ expense.category }}</td>
+                    <td>{{ expense.total_amount }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <h3 class="mt-4">Total Depenses: {{ total_expenses }}</h3>
+    </div>
+</div>
+
+
+<!-- Inclure la bibliothèque Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Récupérer les données passées depuis Django
+    var categories = {{ categories | safe }};
+    var amounts = {{ amounts | safe }};
+
+    // Configurer le graphique
+    var ctx = document.getElementById('expensesChart').getContext('2d');
+    var expensesChart = new Chart(ctx, {
+        type: 'doughnut',  // Vous pouvez changer en 'pie' ou 'line' selon vos préférences
+        data: {
+            labels: categories,
+            datasets: [{
+                label: 'Total Amount by Category',
+                data: amounts,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        
+    });
+</script>
+
+{% endblock %}
+
+
+

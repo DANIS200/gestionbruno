@@ -1,0 +1,138 @@
+# French translation of django invoice system .
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# DANIS PROGRAMMEUR antoinedaniskalolahy@gmail.com, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-02 15:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: django_invoice/settings.py:123
+msgid "French"
+msgstr "Francais"
+
+#: django_invoice/settings.py:124
+msgid "English"
+msgstr "Anglais"
+
+#: fact_app/admin.py:18 fact_app/admin.py:19 fact_app/admin.py:20
+msgid "SYSTEME DE FACTURE DES DEPENSES"
+msgstr ""
+
+#: fact_app/models.py:11
+msgid "Male"
+msgstr "Masculin"
+
+#: fact_app/models.py:12
+msgid "Feminine"
+msgstr "Feminin"
+
+#: fact_app/models.py:51
+msgid "DEPENSES(TRANSPORT)"
+msgstr "DEPESES(TRANSPORT)"
+
+#: fact_app/models.py:52
+msgid "DEPENSES(MAGASIN)"
+msgstr "DEPENSES(MAGASIN)"
+
+#: fact_app/models.py:53
+msgid "DEPENSES PERSONNEL"
+msgstr "DEPENSES PERSONNEL"
+
+#: fact_app/models.py:54
+msgid "AUTRES DEPENSES"
+msgstr "AUTRES DEPENSES"
+
+#: fact_app/models.py:55
+msgid "FACTURE"
+msgstr "FACTURE"
+
+#: fact_app/views.py:71
+msgid "Change made successfully."
+msgstr "Modification effectuée avec succès."
+
+#: fact_app/views.py:87
+msgid "The deletion was successful."
+msgstr "La suppression a réussi."
+
+#: templates/index.html:13
+msgid "Register a new invoice"
+msgstr "Enregistrer une nouvelle facture"
+
+#: templates/index.html:21
+msgid " Register a new employer or customer"
+msgstr "Enregistrer un nouvel employeur ou client"
+
+#: templates/index.html:37
+msgid "CUSTOMERS NAME"
+msgstr "NOM DU EMPLOYER OU CLIENT"
+
+#: templates/index.html:38
+msgid "DATE"
+msgstr "DATE"
+
+#: templates/index.html:39
+msgid "TOTAL"
+msgstr "TOTAL"
+
+#: templates/index.html:40
+msgid "PAID"
+msgstr "PAYÉ"
+
+#: templates/index.html:41
+msgid "TYPE OF INVOICE"
+msgstr "TYPE DE FACTURE"
+
+#: templates/index.html:42
+msgid "ACTION"
+msgstr "ACTION"
+
+#: templates/index.html:62
+msgid "View"
+msgstr "Voir"
+
+#: templates/index.html:66 templates/index.html:185
+msgid "Delete"
+msgstr "Suprimer"
+
+#: templates/index.html:71
+msgid "Modify"
+msgstr "Modifier"
+
+#: templates/index.html:121
+msgid "No invoice found"
+msgstr "Aucune facture trouvée"
+
+#: templates/index.html:147
+msgid "This bill has been paid?"
+msgstr "Cette facture a-t-elle été terminée ?"
+
+#: templates/index.html:150
+msgid "Yes"
+msgstr "Oui"
+
+#: templates/index.html:153
+msgid "No"
+msgstr "Non"
+
+#: templates/index.html:157 templates/index.html:184
+msgid "Close"
+msgstr "Fermer"
+
+#: templates/index.html:172
+msgid "Delete Invoice"
+msgstr "Supprimer la facture"
+
+#: templates/index.html:181
+msgid "Are you sure you want to delete the invoice"
+msgstr "Êtes-vous sûr de vouloir supprimer la facture ?"

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br><br><br><br>
+
+<h2 class="text-capitalize text-center mx-10 bg-dark text-white"> Enregistre un nouvel employeur ou client </h2>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="name"> Nom </label>
+            <input name="name" required type="text" class="form-control" id="name"
+                placeholder="ex:RAZAFY Rakoto">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="email"> Email </label>
+            <input name="email" required type="email" class="form-control" id="email" placeholder="ex:transport@gmail.com">
+        </div>
+
+        <div class="form-group col-md-2">
+            <label for="phone"> Phone </label>
+            <input name="phone" required type="number" class="form-control" id="phone"
+                placeholder="ex:0348203564">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="sex">Sexe</label>
+            <select name="sex" class="form-control" required id="sex">
+                <option> choisir le genre .. </option>
+                <option value="M">Masculin</option>
+                <option value="F">Féminin</option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="addres"> Address </label>
+            <input name="address" type="text" required type="text" class="form-control" id="address"
+                placeholder="ex:Analankinenina toamasina">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="city"> Ville </label>
+            <input name="city" type="text" class="form-control" id="city" placeholder="ex:Toamasina">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="zip"> Zip code </label>
+            <input name="zip" required type="text" class="form-control" id="zip"
+                placeholder="ex:501">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+
+</form>
+
+<br><br><br>
+
+{% endblock content %}

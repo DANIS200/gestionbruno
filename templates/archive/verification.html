@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <h3 class="text-white">{{ name }}</h3>
+</nav>
+<h5 class="title">Contact</h5>
+<p>{{ phone }} <br> {{ address }}</p>
+
+<h5 class="title">Activite</h5>
+<p>{{ activite }}</p>
+
+<h5 class="title">Contrat</h5>
+<p>{{ contrat }} </p>
+
+<h5 class="title">Article</h5>
+<p>{{ articles }}</p>
+
+<h5 class="title">Matériels</h5>
+<p>{{ materiels }}</p>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <small class="text-white">Bruno archive {% now "Y-m-d" %}</small>
+</nav>
+<br>
+<a href="{% url 'download' %}" class="btn btn-primary text-white">Enregistre</a>
+{% endblock %}
